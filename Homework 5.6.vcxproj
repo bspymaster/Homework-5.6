@@ -11,14 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="book.h" />
     <ClInclude Include="compare.h" />
     <ClInclude Include="heap.h" />
     <ClInclude Include="PriorityPair.h" />
     <ClInclude Include="priorityQueue.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="heapmain.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="huffman.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{88794A12-6952-4613-8E10-0EB8A35F1D5A}</ProjectGuid>

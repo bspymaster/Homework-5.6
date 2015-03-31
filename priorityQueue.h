@@ -18,17 +18,17 @@ public:
 template <typename E,typename comp>
 class PriorityQueue{
 private:
-	heap<PriorityPair<E>, IntCompare>* tree;
+	heap<PriorityPair<E>, IntCompare<E>>* tree;
 public:
 	PriorityQueue(int maxSize){
 		PriorityPair<E>* objArray = new PriorityPair<E>[maxSize];
-		tree = new heap<PriorityPair<E> (objArray, 0, maxSize);
+		tree = new heap<PriorityPair<E>,IntCompare<E>> (objArray, 0, maxSize);
 	}
-	void enqueue(int ObjectID, int priority){
-		PriorityPair obj(ObjectID, priority);
+	void enqueue(E ObjectID, int priority){
+		PriorityPair<E> obj(ObjectID, priority);
 		tree->insert(obj);
 	}
-	int dequeue(){
+	E dequeue(){
 		return tree->removefirst().getData();
 	}
 	void changeWeight(int ObjectID, int newPriority){

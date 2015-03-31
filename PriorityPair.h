@@ -1,18 +1,17 @@
 template < typename E >
 class PriorityPair {
 private:
-	E* data;
+	E data;
 	int priority;
 public:
-	PriorityPair(E* _data, int _priority){
+	PriorityPair(E _data, int _priority){
 		data = _data;
 		priority = _priority;
 	}
-	PriorityPair(){
-		data = NULL;
+	PriorityPair() : data(){ //data must have constructer with no arguments
 		priority = 0;
 	}
-	E* getData(){ return data; }
+	E getData(){ return data; }
 	int getPriority(){ return priority; }
 	
 	int setData(){}

@@ -4,7 +4,7 @@
 // Source code Copyright (C) 2007-2011 by Clifford A. Shaffer.
 
 template <typename E>
-void swap(E Array[], int i, int j){
+void Eswap(E Array[], int i, int j){
 	E temp = Array[i];
 	Array[i] = Array[j];
 	Array[j] = temp;
@@ -25,7 +25,7 @@ private:
       if ((rc < n) && Comp::prior(Heap[rc], Heap[j]))
         j = rc;            // Set j to greater child's value
       if (Comp::prior(Heap[pos], Heap[j])) return; // Done
-      swap(Heap, pos, j);
+      Eswap(Heap, pos, j);
       pos = j;             // Move down
     }
   }
@@ -54,14 +54,14 @@ public:
     // Now sift up until curr's parent > curr
     while ((curr!=0) &&
            (Comp::prior(Heap[curr], Heap[parent(curr)]))) {
-      swap(Heap, curr, parent(curr));
+      Eswap(Heap, curr, parent(curr));
       curr = parent(curr);
     }
   }
   // Remove first value
   E removefirst() {
     // Assert (n > 0, "Heap is empty");
-    swap(Heap, 0, --n);       // Swap first with last value
+    Eswap(Heap, 0, --n);       // Eswap first with last value
     if (n != 0) siftdown(0);  // Siftdown new root val
     return Heap[n];             // Return deleted value
   }
@@ -72,10 +72,10 @@ public:
     if (pos == (n-1)) n--; // Last element, no work to do
     else
     {
-      swap(Heap, pos, --n);          // Swap with last value
+      Eswap(Heap, pos, --n);          // Eswap with last value
       while ((pos != 0) &&
              (Comp::prior(Heap[pos], Heap[parent(pos)]))) {
-        swap(Heap, pos, parent(pos)); // Push up large key
+        Eswap(Heap, pos, parent(pos)); // Push up large key
         pos = parent(pos);
       }
       if (n != 0) siftdown(pos);     // Push down small key

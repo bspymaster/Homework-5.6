@@ -15,14 +15,14 @@ public:
 	}
 };
 
-template <typename comp>
+template <typename E,typename comp>
 class PriorityQueue{
 private:
-	heap<PriorityPair, IntCompare>* tree;
+	heap<PriorityPair<E>, IntCompare>* tree;
 public:
 	PriorityQueue(int maxSize){
-		PriorityPair<heap>* objArray = new PriorityPair[maxSize];
-		tree = new heap<PriorityPair<heap> (objArray, 0, maxSize);
+		PriorityPair<E>* objArray = new PriorityPair<E>[maxSize];
+		tree = new heap<PriorityPair<E> (objArray, 0, maxSize);
 	}
 	void enqueue(int ObjectID, int priority){
 		PriorityPair obj(ObjectID, priority);

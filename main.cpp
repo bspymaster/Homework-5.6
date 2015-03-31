@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-	PriorityQueue<IntCompare> queue = PriorityQueue<IntCompare>(7);
+	PriorityQueue<int,IntCompare<int>> queue = PriorityQueue<IntCompare>(7);
 	queue.enqueue(1, 1);
 	queue.enqueue(3, 3);
 	queue.enqueue(2, 2);

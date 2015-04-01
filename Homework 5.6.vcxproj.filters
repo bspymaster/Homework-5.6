@@ -30,10 +30,21 @@
     <ClInclude Include="book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="huffnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hufftree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="huffman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="alpha.huff">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

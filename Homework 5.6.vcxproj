@@ -14,11 +14,16 @@
     <ClInclude Include="book.h" />
     <ClInclude Include="compare.h" />
     <ClInclude Include="heap.h" />
+    <ClInclude Include="huffnode.h" />
+    <ClInclude Include="hufftree.h" />
     <ClInclude Include="PriorityPair.h" />
     <ClInclude Include="priorityQueue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="huffman.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="alpha.huff" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{88794A12-6952-4613-8E10-0EB8A35F1D5A}</ProjectGuid>
@@ -54,6 +59,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

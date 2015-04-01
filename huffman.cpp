@@ -26,7 +26,9 @@
 // Include definition for heaps
 // We will use them to keep track of the forest of huffman trees during the
 // building operation
-#include "heap.h"
+//#include "heap.h"
+
+#include "priorityQueue.h"
 
 #define MAXCODELEN 20       // Max length of a huffman code
 #define CODETABLELEN 100    // Maximum number of codes storable
